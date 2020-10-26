@@ -1,0 +1,1060 @@
+/*==============================================================*/
+/* DBMS name:      Microsoft SQL Server 2008                    */
+/* Created on:     2019-12-18 16:26:36                          */
+/*==============================================================*/
+
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja10') and o.name = 'FK_RELACJA1_RELACJA10_KLIENT')
+alter table Relacja10
+   drop constraint FK_RELACJA1_RELACJA10_KLIENT
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja10') and o.name = 'FK_RELACJA1_RELACJA11_RACHUNEK')
+alter table Relacja10
+   drop constraint FK_RELACJA1_RELACJA11_RACHUNEK
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja11') and o.name = 'FK_RELACJA1_RELACJA12_KLIENT')
+alter table Relacja11
+   drop constraint FK_RELACJA1_RELACJA12_KLIENT
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja11') and o.name = 'FK_RELACJA1_RELACJA13_ZAMOWIEN')
+alter table Relacja11
+   drop constraint FK_RELACJA1_RELACJA13_ZAMOWIEN
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja_1') and o.name = 'FK_RELACJA__RELACJA_1_RESTAURA')
+alter table Relacja_1
+   drop constraint FK_RELACJA__RELACJA_1_RESTAURA
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja_1') and o.name = 'FK_RELACJA__RELACJA_2_PRACOWNI')
+alter table Relacja_1
+   drop constraint FK_RELACJA__RELACJA_2_PRACOWNI
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja_4') and o.name = 'FK_RELACJA__RELACJA_5_KLIENT')
+alter table Relacja_4
+   drop constraint FK_RELACJA__RELACJA_5_KLIENT
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja_4') and o.name = 'FK_RELACJA__RELACJA_6_RESTAURA')
+alter table Relacja_4
+   drop constraint FK_RELACJA__RELACJA_6_RESTAURA
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja_5') and o.name = 'FK_RELACJA__RELACJA_7_KLIENT')
+alter table Relacja_5
+   drop constraint FK_RELACJA__RELACJA_7_KLIENT
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja_5') and o.name = 'FK_RELACJA__RELACJA_8_REZERWAC')
+alter table Relacja_5
+   drop constraint FK_RELACJA__RELACJA_8_REZERWAC
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja_8') and o.name = 'FK_RELACJA__RELACJA_1_REZERWAC')
+alter table Relacja_8
+   drop constraint FK_RELACJA__RELACJA_1_REZERWAC
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relacja_8') and o.name = 'FK_RELACJA__RELACJA_1_STOLIK')
+alter table Relacja_8
+   drop constraint FK_RELACJA__RELACJA_1_STOLIK
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relationship_12') and o.name = 'FK_RELATION_RELATIONS_PRACOWNI')
+alter table Relationship_12
+   drop constraint FK_RELATION_RELATIONS_PRACOWNI
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('Relationship_12') and o.name = 'FK_RELATION_RELATIONS_ZAMOWIEN')
+alter table Relationship_12
+   drop constraint FK_RELATION_RELATIONS_ZAMOWIEN
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('pracownik') and o.name = 'FK_PRACOWNI_RELACJA_3_PRACOWNI')
+alter table pracownik
+   drop constraint FK_PRACOWNI_RELACJA_3_PRACOWNI
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('pracownik') and o.name = 'FK_PRACOWNI_RELACJA_4_PENSJA')
+alter table pracownik
+   drop constraint FK_PRACOWNI_RELACJA_4_PENSJA
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('produktyMenu') and o.name = 'FK_PRODUKTY_RELACJA16_SZCZEGOL')
+alter table produktyMenu
+   drop constraint FK_PRODUKTY_RELACJA16_SZCZEGOL
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('produktyMenu') and o.name = 'FK_PRODUKTY_RELACJA17_KATEGORI')
+alter table produktyMenu
+   drop constraint FK_PRODUKTY_RELACJA17_KATEGORI
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('rachunek') and o.name = 'FK_RACHUNEK_RELACJA15_PLATNOSC')
+alter table rachunek
+   drop constraint FK_RACHUNEK_RELACJA15_PLATNOSC
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('rezerwacja') and o.name = 'FK_REZERWAC_RELACJA_1_PRACOWNI')
+alter table rezerwacja
+   drop constraint FK_REZERWAC_RELACJA_1_PRACOWNI
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('rezerwacja') and o.name = 'FK_REZERWAC_RELACJA_9_STATUSRE')
+alter table rezerwacja
+   drop constraint FK_REZERWAC_RELACJA_9_STATUSRE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('stolik') and o.name = 'FK_STOLIK_RELACJA9_STOLIKST')
+alter table stolik
+   drop constraint FK_STOLIK_RELACJA9_STOLIKST
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('zamowienie') and o.name = 'FK_ZAMOWIEN_RELACJA14_SZCZEGOL')
+alter table zamowienie
+   drop constraint FK_ZAMOWIEN_RELACJA14_SZCZEGOL
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja10')
+            and   name  = 'Relacja11_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja10.Relacja11_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja10')
+            and   name  = 'Relacja10_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja10.Relacja10_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('Relacja10')
+            and   type = 'U')
+   drop table Relacja10
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja11')
+            and   name  = 'Relacja13_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja11.Relacja13_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja11')
+            and   name  = 'Relacja12_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja11.Relacja12_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('Relacja11')
+            and   type = 'U')
+   drop table Relacja11
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja_1')
+            and   name  = 'Relationship_2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja_1.Relationship_2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja_1')
+            and   name  = 'Relationship_1_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja_1.Relationship_1_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('Relacja_1')
+            and   type = 'U')
+   drop table Relacja_1
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja_4')
+            and   name  = 'Relationship_6_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja_4.Relationship_6_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja_4')
+            and   name  = 'Relationship_5_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja_4.Relationship_5_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('Relacja_4')
+            and   type = 'U')
+   drop table Relacja_4
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja_5')
+            and   name  = 'Relationship_8_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja_5.Relationship_8_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja_5')
+            and   name  = 'Relationship_7_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja_5.Relationship_7_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('Relacja_5')
+            and   type = 'U')
+   drop table Relacja_5
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja_8')
+            and   name  = 'Relationship_12_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja_8.Relationship_12_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relacja_8')
+            and   name  = 'Relationship_11_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relacja_8.Relationship_11_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('Relacja_8')
+            and   type = 'U')
+   drop table Relacja_8
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relationship_12')
+            and   name  = 'Relationship_13_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relationship_12.Relationship_13_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('Relationship_12')
+            and   name  = 'Relationship_12_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index Relationship_12.Relationship_12_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('Relationship_12')
+            and   type = 'U')
+   drop table Relationship_12
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('kategorieMenu')
+            and   type = 'U')
+   drop table kategorieMenu
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('klient')
+            and   type = 'U')
+   drop table klient
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('pensja')
+            and   type = 'U')
+   drop table pensja
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('platnosc')
+            and   type = 'U')
+   drop table platnosc
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('pracownik')
+            and   name  = 'Relationship_4_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index pracownik.Relationship_4_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('pracownik')
+            and   name  = 'Relationship_3_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index pracownik.Relationship_3_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('pracownik')
+            and   type = 'U')
+   drop table pracownik
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('produktyMenu')
+            and   name  = 'Relacja17_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index produktyMenu.Relacja17_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('produktyMenu')
+            and   name  = 'Relacja16_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index produktyMenu.Relacja16_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('produktyMenu')
+            and   type = 'U')
+   drop table produktyMenu
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('rachunek')
+            and   name  = 'Relacja15_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index rachunek.Relacja15_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('rachunek')
+            and   type = 'U')
+   drop table rachunek
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('restauracja')
+            and   type = 'U')
+   drop table restauracja
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('rezerwacja')
+            and   name  = 'Relationship_10_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index rezerwacja.Relationship_10_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('rezerwacja')
+            and   name  = 'Relationship_9_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index rezerwacja.Relationship_9_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('rezerwacja')
+            and   type = 'U')
+   drop table rezerwacja
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('statusRezerwacji')
+            and   type = 'U')
+   drop table statusRezerwacji
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('stolik')
+            and   name  = 'Relacja9_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index stolik.Relacja9_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('stolik')
+            and   type = 'U')
+   drop table stolik
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('stolikStatus')
+            and   type = 'U')
+   drop table stolikStatus
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('szczegolyZamowienia')
+            and   type = 'U')
+   drop table szczegolyZamowienia
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('zamowienie')
+            and   name  = 'Relacja14_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index zamowienie.Relacja14_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('zamowienie')
+            and   type = 'U')
+   drop table zamowienie
+go
+
+/*==============================================================*/
+/* Table: Relacja10                                             */
+/*==============================================================*/
+create table Relacja10 (
+   id_klienta           int                  not null,
+   id_rachunek          int                  not null,
+   constraint PK_RELACJA10 primary key (id_klienta, id_rachunek)
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja10_FK                                          */
+/*==============================================================*/
+create index Relacja10_FK on Relacja10 (
+id_klienta ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja11_FK                                          */
+/*==============================================================*/
+create index Relacja11_FK on Relacja10 (
+id_rachunek ASC
+)
+go
+
+/*==============================================================*/
+/* Table: Relacja11                                             */
+/*==============================================================*/
+create table Relacja11 (
+   id_klienta           int                  not null,
+   id_zamowienia        int                  not null,
+   constraint PK_RELACJA11 primary key (id_klienta, id_zamowienia)
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja12_FK                                          */
+/*==============================================================*/
+create index Relacja12_FK on Relacja11 (
+id_klienta ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja13_FK                                          */
+/*==============================================================*/
+create index Relacja13_FK on Relacja11 (
+id_zamowienia ASC
+)
+go
+
+/*==============================================================*/
+/* Table: Relacja_1                                             */
+/*==============================================================*/
+create table Relacja_1 (
+   restauracja_id       int                  not null,
+   pracownik_id         int                  not null,
+   constraint PK_RELACJA_1 primary key (restauracja_id, pracownik_id)
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_1_FK                                     */
+/*==============================================================*/
+create index Relationship_1_FK on Relacja_1 (
+restauracja_id ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_2_FK                                     */
+/*==============================================================*/
+create index Relationship_2_FK on Relacja_1 (
+pracownik_id ASC
+)
+go
+
+/*==============================================================*/
+/* Table: Relacja_4                                             */
+/*==============================================================*/
+create table Relacja_4 (
+   id_klienta           int                  not null,
+   restauracja_id       int                  not null,
+   constraint PK_RELACJA_4 primary key (id_klienta, restauracja_id)
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_5_FK                                     */
+/*==============================================================*/
+create index Relationship_5_FK on Relacja_4 (
+id_klienta ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_6_FK                                     */
+/*==============================================================*/
+create index Relationship_6_FK on Relacja_4 (
+restauracja_id ASC
+)
+go
+
+/*==============================================================*/
+/* Table: Relacja_5                                             */
+/*==============================================================*/
+create table Relacja_5 (
+   id_klienta           int                  not null,
+   id_rezerwacja        int                  not null,
+   constraint PK_RELACJA_5 primary key (id_klienta, id_rezerwacja)
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_7_FK                                     */
+/*==============================================================*/
+create index Relationship_7_FK on Relacja_5 (
+id_klienta ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_8_FK                                     */
+/*==============================================================*/
+create index Relationship_8_FK on Relacja_5 (
+id_rezerwacja ASC
+)
+go
+
+/*==============================================================*/
+/* Table: Relacja_8                                             */
+/*==============================================================*/
+create table Relacja_8 (
+   id_rezerwacja        int                  not null,
+   id_stolik            int                  not null,
+   constraint PK_RELACJA_8 primary key (id_rezerwacja, id_stolik)
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_11_FK                                    */
+/*==============================================================*/
+create index Relationship_11_FK on Relacja_8 (
+id_rezerwacja ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_12_FK                                    */
+/*==============================================================*/
+create index Relationship_12_FK on Relacja_8 (
+id_stolik ASC
+)
+go
+
+/*==============================================================*/
+/* Table: Relationship_12                                       */
+/*==============================================================*/
+create table Relationship_12 (
+   pracownik_id         int                  not null,
+   id_zamowienia        int                  not null,
+   constraint PK_RELATIONSHIP_12 primary key (pracownik_id, id_zamowienia)
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_12_FK                                    */
+/*==============================================================*/
+create index Relationship_12_FK on Relationship_12 (
+pracownik_id ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_13_FK                                    */
+/*==============================================================*/
+create index Relationship_13_FK on Relationship_12 (
+id_zamowienia ASC
+)
+go
+
+/*==============================================================*/
+/* Table: kategorieMenu                                         */
+/*==============================================================*/
+create table kategorieMenu (
+   id_kategorii         int                  not null,
+   Nazwa_kategorii      varchar(50)          not null,
+   constraint PK_KATEGORIEMENU primary key nonclustered (id_kategorii)
+)
+go
+
+/*==============================================================*/
+/* Table: klient                                                */
+/*==============================================================*/
+create table klient (
+   id_klienta           int                  not null,
+   imie_klienta         varchar(50)          not null,
+   nazwisko_klienta     varchar(50)          not null,
+   adres_miejscowosc_klienta varchar(100)         not null,
+   adres_ulica_klienta  varchar(50)          not null,
+   adres_kod_pocztowy_klienta int                  not null,
+   telefony_klienta     int                  not null,
+   constraint PK_KLIENT primary key nonclustered (id_klienta)
+)
+go
+
+/*==============================================================*/
+/* Table: pensja                                                */
+/*==============================================================*/
+create table pensja (
+   id_pensja            int                  not null,
+   miesieczna_pensja    int                  not null,
+   constraint PK_PENSJA primary key nonclustered (id_pensja)
+)
+go
+
+/*==============================================================*/
+/* Table: platnosc                                              */
+/*==============================================================*/
+create table platnosc (
+   id_platnosc          int                  not null,
+   gotowka              money                not null,
+   karta                int                  not null,
+   blik                 int                  not null,
+   constraint PK_PLATNOSC primary key nonclustered (id_platnosc)
+)
+go
+
+/*==============================================================*/
+/* Table: pracownik                                             */
+/*==============================================================*/
+create table pracownik (
+   pracownik_id         int                  not null,
+   pra_pracownik_id     int                  null,
+   id_pensja            int                  not null,
+   imie_pracownika      varchar(50)          not null,
+   nazwisko_pracownika  char(50)             not null,
+   telefon_pracownika   int                  not null,
+   adres_miejscowosci_pracownika char(50)             not null,
+   adres_ulica_pracownika char(50)             not null,
+   adres_kod_pocztowy_pracownika int                  not null,
+   constraint PK_PRACOWNIK primary key nonclustered (pracownik_id)
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_3_FK                                     */
+/*==============================================================*/
+create index Relationship_3_FK on pracownik (
+pra_pracownik_id ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_4_FK                                     */
+/*==============================================================*/
+create index Relationship_4_FK on pracownik (
+id_pensja ASC
+)
+go
+
+/*==============================================================*/
+/* Table: produktyMenu                                          */
+/*==============================================================*/
+create table produktyMenu (
+   id_produkt           int                  not null,
+   id_szczegoly         int                  not null,
+   id_kategorii         int                  not null,
+   Nazwa_produktu       varchar(50)          not null,
+   opis_produktu        text                 not null,
+   cena_produktu        money                not null,
+   constraint PK_PRODUKTYMENU primary key nonclustered (id_produkt)
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja16_FK                                          */
+/*==============================================================*/
+create index Relacja16_FK on produktyMenu (
+id_szczegoly ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja17_FK                                          */
+/*==============================================================*/
+create index Relacja17_FK on produktyMenu (
+id_kategorii ASC
+)
+go
+
+/*==============================================================*/
+/* Table: rachunek                                              */
+/*==============================================================*/
+create table rachunek (
+   id_rachunek          int                  not null,
+   id_platnosc          int                  not null,
+   cena_rachunek        money                not null,
+   constraint PK_RACHUNEK primary key nonclustered (id_rachunek)
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja15_FK                                          */
+/*==============================================================*/
+create index Relacja15_FK on rachunek (
+id_platnosc ASC
+)
+go
+
+/*==============================================================*/
+/* Table: restauracja                                           */
+/*==============================================================*/
+create table restauracja (
+   restauracja_id       int                  not null,
+   Nazwa_restauracja    varchar(50)          not null,
+   adres_restauracja    char(100)            not null,
+   telefon_restauracja  int                  not null,
+   constraint PK_RESTAURACJA primary key nonclustered (restauracja_id)
+)
+go
+
+/*==============================================================*/
+/* Table: rezerwacja                                            */
+/*==============================================================*/
+create table rezerwacja (
+   id_rezerwacja        int                  not null,
+   pracownik_id         int                  not null,
+   id_status            int                  not null,
+   data_rezerwacja      datetime             not null,
+   godzina_rezerwacja   datetime             not null,
+   koniec_rezerwacja    datetime             not null,
+   constraint PK_REZERWACJA primary key nonclustered (id_rezerwacja)
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_9_FK                                     */
+/*==============================================================*/
+create index Relationship_9_FK on rezerwacja (
+id_status ASC
+)
+go
+
+/*==============================================================*/
+/* Index: Relationship_10_FK                                    */
+/*==============================================================*/
+create index Relationship_10_FK on rezerwacja (
+pracownik_id ASC
+)
+go
+
+/*==============================================================*/
+/* Table: statusRezerwacji                                      */
+/*==============================================================*/
+create table statusRezerwacji (
+   id_status            int                  not null,
+   status_rezerwacji    bit                  not null,
+   constraint PK_STATUSREZERWACJI primary key nonclustered (id_status)
+)
+go
+
+/*==============================================================*/
+/* Table: stolik                                                */
+/*==============================================================*/
+create table stolik (
+   id_stolik            int                  not null,
+   id_status_stolika    int                  not null,
+   miejsca_stolik       int                  not null,
+   constraint PK_STOLIK primary key nonclustered (id_stolik)
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja9_FK                                           */
+/*==============================================================*/
+create index Relacja9_FK on stolik (
+id_status_stolika ASC
+)
+go
+
+/*==============================================================*/
+/* Table: stolikStatus                                          */
+/*==============================================================*/
+create table stolikStatus (
+   id_status_stolika    int                  not null,
+   status_stolik        bit                  not null,
+   constraint PK_STOLIKSTATUS primary key nonclustered (id_status_stolika)
+)
+go
+
+/*==============================================================*/
+/* Table: szczegolyZamowienia                                   */
+/*==============================================================*/
+create table szczegolyZamowienia (
+   id_szczegoly         int                  not null,
+   opis_zamowienia      text                 not null,
+   ilosc                int                  not null,
+   komenatarz           varchar(400)         not null,
+   cena_zamowienia      money                not null,
+   constraint PK_SZCZEGOLYZAMOWIENIA primary key nonclustered (id_szczegoly)
+)
+go
+
+/*==============================================================*/
+/* Table: zamowienie                                            */
+/*==============================================================*/
+create table zamowienie (
+   id_zamowienia        int                  not null,
+   id_szczegoly         int                  not null,
+   Nazwa_zamowienia     varchar(100)         not null,
+   constraint PK_ZAMOWIENIE primary key nonclustered (id_zamowienia)
+)
+go
+
+/*==============================================================*/
+/* Index: Relacja14_FK                                          */
+/*==============================================================*/
+create index Relacja14_FK on zamowienie (
+id_szczegoly ASC
+)
+go
+
+alter table Relacja10
+   add constraint FK_RELACJA1_RELACJA10_KLIENT foreign key (id_klienta)
+      references klient (id_klienta)
+go
+
+alter table Relacja10
+   add constraint FK_RELACJA1_RELACJA11_RACHUNEK foreign key (id_rachunek)
+      references rachunek (id_rachunek)
+go
+
+alter table Relacja11
+   add constraint FK_RELACJA1_RELACJA12_KLIENT foreign key (id_klienta)
+      references klient (id_klienta)
+go
+
+alter table Relacja11
+   add constraint FK_RELACJA1_RELACJA13_ZAMOWIEN foreign key (id_zamowienia)
+      references zamowienie (id_zamowienia)
+go
+
+alter table Relacja_1
+   add constraint FK_RELACJA__RELACJA_1_RESTAURA foreign key (restauracja_id)
+      references restauracja (restauracja_id)
+go
+
+alter table Relacja_1
+   add constraint FK_RELACJA__RELACJA_2_PRACOWNI foreign key (pracownik_id)
+      references pracownik (pracownik_id)
+go
+
+alter table Relacja_4
+   add constraint FK_RELACJA__RELACJA_5_KLIENT foreign key (id_klienta)
+      references klient (id_klienta)
+go
+
+alter table Relacja_4
+   add constraint FK_RELACJA__RELACJA_6_RESTAURA foreign key (restauracja_id)
+      references restauracja (restauracja_id)
+go
+
+alter table Relacja_5
+   add constraint FK_RELACJA__RELACJA_7_KLIENT foreign key (id_klienta)
+      references klient (id_klienta)
+go
+
+alter table Relacja_5
+   add constraint FK_RELACJA__RELACJA_8_REZERWAC foreign key (id_rezerwacja)
+      references rezerwacja (id_rezerwacja)
+go
+
+alter table Relacja_8
+   add constraint FK_RELACJA__RELACJA_1_REZERWAC foreign key (id_rezerwacja)
+      references rezerwacja (id_rezerwacja)
+go
+
+alter table Relacja_8
+   add constraint FK_RELACJA__RELACJA_1_STOLIK foreign key (id_stolik)
+      references stolik (id_stolik)
+go
+
+alter table Relationship_12
+   add constraint FK_RELATION_RELATIONS_PRACOWNI foreign key (pracownik_id)
+      references pracownik (pracownik_id)
+go
+
+alter table Relationship_12
+   add constraint FK_RELATION_RELATIONS_ZAMOWIEN foreign key (id_zamowienia)
+      references zamowienie (id_zamowienia)
+go
+
+alter table pracownik
+   add constraint FK_PRACOWNI_RELACJA_3_PRACOWNI foreign key (pra_pracownik_id)
+      references pracownik (pracownik_id)
+go
+
+alter table pracownik
+   add constraint FK_PRACOWNI_RELACJA_4_PENSJA foreign key (id_pensja)
+      references pensja (id_pensja)
+go
+
+alter table produktyMenu
+   add constraint FK_PRODUKTY_RELACJA16_SZCZEGOL foreign key (id_szczegoly)
+      references szczegolyZamowienia (id_szczegoly)
+go
+
+alter table produktyMenu
+   add constraint FK_PRODUKTY_RELACJA17_KATEGORI foreign key (id_kategorii)
+      references kategorieMenu (id_kategorii)
+go
+
+alter table rachunek
+   add constraint FK_RACHUNEK_RELACJA15_PLATNOSC foreign key (id_platnosc)
+      references platnosc (id_platnosc)
+go
+
+alter table rezerwacja
+   add constraint FK_REZERWAC_RELACJA_1_PRACOWNI foreign key (pracownik_id)
+      references pracownik (pracownik_id)
+go
+
+alter table rezerwacja
+   add constraint FK_REZERWAC_RELACJA_9_STATUSRE foreign key (id_status)
+      references statusRezerwacji (id_status)
+go
+
+alter table stolik
+   add constraint FK_STOLIK_RELACJA9_STOLIKST foreign key (id_status_stolika)
+      references stolikStatus (id_status_stolika)
+go
+
+alter table zamowienie
+   add constraint FK_ZAMOWIEN_RELACJA14_SZCZEGOL foreign key (id_szczegoly)
+      references szczegolyZamowienia (id_szczegoly)
+go
+
